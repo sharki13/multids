@@ -373,15 +373,7 @@ void supla_arduino_svr_disconnect(void)
 
 void supla_arduino_eth_setup(uint8_t mac[6], IPAddress *ip)
 {
-  const char *ssid = "Sharki";
-  const char *password = "mundek08";
-
-  WiFi.begin(ssid, password);
-
-  while (WiFi.status() != WL_CONNECTED)
-  {
-    delay(500);
-  }
+    WiFi_up();
 }
 
 SuplaDeviceCallbacks supla_arduino_get_callbacks(void)
